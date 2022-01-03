@@ -54,7 +54,7 @@ namespace ConsoleApp21
                     if (field[j, i] == 0)
 
                         field[j, i] = 2;
-                    Thread.Sleep(1);
+                    
                 }
             }
         }
