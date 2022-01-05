@@ -19,9 +19,10 @@ namespace ConsoleApp21
             ThreadStart threadStart1 = new ThreadStart(gardener1);
             Thread thread1 = new Thread(threadStart1);
             thread1.Start();
-            gardener2();
            
-            
+            gardener2();
+        
+
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
@@ -41,20 +42,20 @@ namespace ConsoleApp21
                     if (field[i, j] == 0)
 
                         field[i, j] = 1;
-                    
+                    Thread.Sleep(1);
                 }
             }
         }
         static void gardener2()
         {
-            for (int i = n - 1; i >= 0; i--)
+            for (int i = m - 1; i >= 0; i--)
             {
                 for (int j = n - 1; j >=0; j--)
                 {
                     if (field[j, i] == 0)
 
                         field[j, i] = 2;
-                    
+                    Thread.Sleep(1);
                 }
             }
         }
